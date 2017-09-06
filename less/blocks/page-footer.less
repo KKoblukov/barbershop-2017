@@ -1,0 +1,36 @@
+.page-footer {
+  padding-top: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 24px;
+
+  text-align: center;
+}
+
+.page-footer__wrapper {
+  .container-fluid();
+}
+
+@media @tablet-widths {
+  .page-footer {
+    padding-right: 0;
+    padding-left: 0;
+
+    text-align: left;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .page-footer__wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+}

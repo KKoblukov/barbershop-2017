@@ -1,9 +1,8 @@
 .main-nav {
   position: relative;
 
-  width: 320px;
-  //min-height: 51px;
-  margin: 0 auto;
+  width: auto;
+  min-height: 50px;
 
   background-color: #826550;
 }
@@ -154,8 +153,8 @@
     width: 16px;
     height: 16px;
 
-    background-image: url(img/icon-login.png);
-    background-position: -10px -82px;
+    background-image: url(../img/sprite.png);
+    background-position: -10px -204px;
     opacity: 0.3;
   }
 }
@@ -243,8 +242,10 @@
   }
 
   .main-nav__wrapper {
-    .container();
-    .clearfix();
+    .container-fluid();
+
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-nav__toggle {
@@ -252,12 +253,12 @@
   }
 
   .main-nav__items {
-    float:left;
-    width: 570px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
   }
 
   .main-nav__user-items {
-    float: right;
     width: 60px;
   }
 

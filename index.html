@@ -15,7 +15,11 @@
       классика</h1>
 
     <div class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+      </picture>
     </div>
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -73,25 +77,105 @@
     <section class="advantages">
       <div class="advantages__wrapper">
         <ul class="advantages__items">
-          <li class="advantages__item"></li>
-          <li class="advantages__item"></li>
-          <li class="advantages__item"></li>
+          <li class="advantages__item advantages__item--show">
+            <h3 class="advantages__title">Быстро</h3>
+            <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки</p>
+          </li>
+          <li class="advantages__item advantages__item--hide">
+            <h3 class="advantages__title">Круто</h3>
+            <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+          </li>
+          <li class="advantages__item advantages__item--hide">
+            <h3 class="advantages__title">Дорого</h3>
+            <p class="advantages__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+          </li>
         </ul>
+        <div class="breadcrumbs">
+          <span class="breadcrumbs__item breadcrumbs__item--active"></span>
+          <span class="breadcrumbs__item"></span>
+          <span class="breadcrumbs__item"></span>
+        </div>
       </div>
     </section>
 
     <section class="news">
       <div class="news__wrapper">
-        <h2 class="news__title"></h2>
+        <h2 class="news__title">Новости и акции</h2>
 
         <ul class="news__items">
-          <li class="news__item"></li>
-          <li class="news__item"></li>
-          <li class="news__item"></li>
+          <li class="news__item">
+            <div class="news__date">
+              <b>29</b>
+              <p>сент</p>
+            </div>
+            <p class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+          </li>
+          <li class="news__item">
+            <div class="news__date">
+              <b>19</b>
+              <p>сент</p>
+            </div>
+            <p class="news__description">В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
+          </li>
+          <li class="news__item">
+            <div class="news__date">
+              <b>9</b>
+              <p>сент</p>
+            </div>
+            <p class="news__description">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+          </li>
         </ul>
+
+        <a href="#" class="button button-news">Показать все</a>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title">Отзывы о нас</h2>
+        <a href="#" class="button button--review">Оставить свой</a>
+        <div class="reviews__slider">
+          <button class="button button--prev"></button>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <img class="reviews__photo" src="../img/travis.jpg" alt="Трэвис Баркер">
+              <h3 class="reviews__author">Трэвис Баркер</h3>
+              <p class="reviews__description">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+            </li>
+          </ul>
+          <button class="button button--next"></button>
+          <div class="breadcrumbs breadcrumbs--news">
+            <span class="breadcrumbs__item breadcrumbs__item--news breadcrumbs__item--active"></span>
+            <span class="breadcrumbs__item breadcrumbs__item--news"></span>
+            <span class="breadcrumbs__item breadcrumbs__item--news"></span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+
+      <section class="contacts">
+        <b class="contacts__title">Барбершоп Бородинский</b>
+        <p class="contacts__adress">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+        <a href="tel:+78125556666" class="contacts__phone"><span>Тел.: </span>+7 (812) 555-66-66</a>
+      </section>
+
+      <section class="social">
+        <h2 class="social__title">Давайте дружить!</h2>
+        <a href="#" class="social__btn social__btn--vk">Вконтакте</a>
+        <a href="#" class="social__btn social__btn--fb">Фейсбук</a>
+        <a href="#" class="social__btn social__btn--inst">Инстаграмм</a>
+      </section>
+
+      <section class="developer">
+        <b class="developer__title">Разработано:</b>
+        <a href="#" class="button button--developer">HTML Academy</a>
+      </section>
+
+    </div>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 

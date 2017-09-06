@@ -1,0 +1,110 @@
+.social {
+  width: 100%;
+  display: flex;
+  //justify-content: space-between;
+}
+
+.social__btn {
+  min-width: 33.3%;
+  height: 101px;
+
+  position: relative;
+  flex-shrink: 1;
+
+  font-size: 0;
+
+  border: 1px solid #3e3e3e;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+  }
+
+  &--vk::before {
+    width: 23px;
+    height: 26px;
+
+    background-position: -10px -312px;
+  }
+
+  &--fb::before {
+    width: 18px;
+    height: 39px;
+
+    background-position: -10px -10px;
+  }
+
+  &--inst::before {
+    width: 36px;
+    height: 36px;
+
+    background-position: -10px -109px;
+  }
+}
+
+.social__title {
+  display: none;
+}
+
+@media @tablet-widths {
+  .social {
+    order: 1;
+  }
+}
+
+@media @desktop-widths {
+  .social {
+    width: 33.3%;
+    min-width: 162px;
+    padding-left: 79px;
+    padding-right: 79px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .social__btn {
+    min-width: 50px;
+    height: 50px;
+
+    &--vk::before {
+      width: 15px;
+      height: 17px;
+
+      background-position: -10px -358px;
+    }
+
+    &--fb::before {
+      width: 10px;
+      height: 21px;
+
+      background-position: -10px -68px;
+    }
+
+    &--inst::before {
+      width: 19px;
+      height: 19px;
+
+      background-position: -10px -165px;
+    }
+  }
+
+  .social__title {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+
+    display: inline-block;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    text-align: center;
+  }
+
+}

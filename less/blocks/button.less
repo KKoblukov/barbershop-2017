@@ -1,0 +1,108 @@
+.button {
+  padding: 12px 90px;
+
+  display: block;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+
+  border: 1px solid #e5ddd5;
+}
+
+.button-news {
+  display: block;
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.button--review,
+.button--prev,
+.button--next {
+  display: none;
+}
+
+.button--developer {
+  color: #fff;
+  background-color: transparent;
+  border-color: #3d3d3d;
+}
+
+@media @tablet-widths {
+  .button-news {
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .button--review,
+  .button--prev,
+  .button--next {
+    display: block;
+  }
+
+  .button--review {
+    margin-left: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .button--prev,
+  .button--next {
+    min-width: 50px;
+    padding: 0;
+
+    position: relative;
+
+    &::after {
+      width: 24px;
+      height: 12px;
+
+      content: '';
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+
+    }
+  }
+
+  .button--prev {
+    &::after {
+      left: 0;
+      border-right: 12px solid #000;
+    }
+  }
+
+  .button--next {
+    &::after {
+      right: 0;
+      border-left: 12px solid #000;
+    }
+  }
+
+  .button--developer {
+    width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+@media @desktop-widths {
+  .button--developer {
+    margin-left: auto;
+  }
+}
